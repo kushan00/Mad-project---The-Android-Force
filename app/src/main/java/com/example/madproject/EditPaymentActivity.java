@@ -91,7 +91,7 @@ public class EditPaymentActivity extends AppCompatActivity {
                         loadingPB.setVisibility(View.GONE);
                         databaseReference.updateChildren(map);
                         Toast.makeText(EditPaymentActivity.this, "Payment Details Updated", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(EditPaymentActivity.this,MainActivity.class));
+                        startActivity(new Intent(EditPaymentActivity.this,PaymentDetails.class));
                     }
 
                     @Override
@@ -113,6 +113,6 @@ public class EditPaymentActivity extends AppCompatActivity {
     private void deletePayment(){
         databaseReference.removeValue();
         Toast.makeText(this, "Payment Details Deleted!", Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(EditPaymentActivity.this,MainActivity.class));
+        startActivity(new Intent(EditPaymentActivity.this,PaymentDetails.class));
     }
 }
