@@ -32,6 +32,9 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        getSupportActionBar ().setTitle ("The Food Express") ;
+
         setContentView(R.layout.activity_login);
         userNameEdt = findViewById(R.id.idEdtUserName);
         pwdEdt = findViewById(R.id.idEdtPwd);

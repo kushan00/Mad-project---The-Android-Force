@@ -46,6 +46,9 @@ public class MainActivity extends AppCompatActivity implements PaymentRVAdapter.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        getSupportActionBar ().setTitle ("The Food Express") ;
+
         setContentView(R.layout.activity_main);
         paymentRV = findViewById(R.id.idRVPayment);
         loadingPB = findViewById(R.id.idPBLoding);

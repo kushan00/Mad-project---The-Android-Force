@@ -29,6 +29,9 @@ public class AddPaymentActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        getSupportActionBar ().setTitle ("The Food Express") ;
+
         setContentView(R.layout.activity_add_payment);
         UnameEDT = findViewById(R.id.idEDTUname);
         FullNameEDT = findViewById(R.id.idEDTfullName);
