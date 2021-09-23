@@ -16,6 +16,8 @@ public class HomePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
 
+        getSupportActionBar ().setTitle ("The Food Express") ;
+
         clientbtn = findViewById(R.id.idBTNclient);
         adminbtn = findViewById(R.id.idBTNadmin);
 
