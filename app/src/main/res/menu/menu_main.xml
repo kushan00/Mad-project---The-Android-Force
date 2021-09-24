@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/idLogout"
-        android:title="Log out"/>
+    <item android:id="@+id/idCustomerD"
+        android:title="My Details"/>
     <item android:id="@+id/idPaymentD"
         android:title="My Payment Details"/>
     <item android:id="@+id/idDeliveryD"
         android:title="My Delivery Details"/>
-    <item android:id="@+id/idCustomerD"
-        android:title="My Details"/>
+    <item android:id="@+id/idLogout"
+        android:title="Log out"/>
 </menu>

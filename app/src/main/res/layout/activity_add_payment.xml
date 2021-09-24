@@ -190,16 +190,17 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
+                android:id="@+id/idBtnSavePayment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
                 android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/custom_button_back"
                 android:text="Save Payment Details"
                 android:textAllCaps="false"
-                android:background="@drawable/custom_button_back"
-                android:layout_marginBottom="10dp"
-                android:id="@+id/idBtnSavePayment"/>
+                app:backgroundTint="#24DA04" />
 
         </LinearLayout>
 

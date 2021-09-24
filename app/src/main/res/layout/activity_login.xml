@@ -58,19 +58,20 @@
 
 
    ]
+
     <Button
+        android:id="@+id/idBtnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
         android:layout_below="@id/idTILPassword"
-        android:background="@drawable/custom_button_back"
-        android:textColor="@color/white"
-        android:id="@+id/idBtnLogin"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/custom_button_back"
         android:text="Login"
         android:textAllCaps="false"
-        />
+        android:textColor="@color/white"
+        app:backgroundTint="#24DA04" />
 
     <TextView
         android:layout_width="match_parent"

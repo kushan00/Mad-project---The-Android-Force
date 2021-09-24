@@ -203,28 +203,28 @@
                 <Button
                     android:id="@+id/idBtnUpdatePayment"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
+                    android:layout_weight="1"
                     android:background="@drawable/custom_button_back"
                     android:text="Update Details"
                     android:textAllCaps="false"
-                    android:textColor="@color/white"/>
+                    android:textColor="@color/white"
+                    app:backgroundTint="#24DA04" />
 
                 <Button
                     android:id="@+id/idBtnDeletePayment"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
+                    android:layout_weight="1"
                     android:background="@drawable/custom_button_back"
                     android:text="Delete Details"
                     android:textAllCaps="false"
-                    android:textColor="@color/white"/>
+                    android:textColor="@color/white"
+                    app:backgroundTint="#24DA04" />
 
             </LinearLayout>
-
-
 
         </LinearLayout>
 
