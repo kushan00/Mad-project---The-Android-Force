@@ -138,6 +138,7 @@ public class PaymentDetails extends AppCompatActivity implements PaymentRVAdapte
             }
         });
 
+
     }
 
     @Override
@@ -155,6 +156,11 @@ public class PaymentDetails extends AppCompatActivity implements PaymentRVAdapte
                 mAuth.signOut();
                 Intent i = new Intent(PaymentDetails.this,LoginActivity.class);
                 startActivity(i);
+                this.finish();
+                return  true;
+            case R.id.idBTNupdatePD:
+                Intent pd = new Intent(PaymentDetails.this,LoginActivity.class);
+                startActivity(pd);
                 this.finish();
                 return  true;
             default:
