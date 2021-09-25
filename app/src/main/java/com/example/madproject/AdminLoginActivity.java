@@ -60,7 +60,9 @@ public class AdminLoginActivity extends AppCompatActivity {
                 mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-
+                        
+                        //chck login 
+//chwck
                         if (task.isSuccessful()) {
 
                             loadingPB1.setVisibility(View.GONE);
