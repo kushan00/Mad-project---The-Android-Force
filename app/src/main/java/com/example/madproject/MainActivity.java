@@ -5,7 +5,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
+//
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
@@ -19,21 +19,21 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
-
+//
 public class MainActivity extends AppCompatActivity {
     RecyclerView rew;
     myadapter adapter;
     FloatingActionButton fb;
     private FirebaseAuth mAuth;
     private Menu menu;
-
+//
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mAuth = FirebaseAuth.getInstance();
         setTitle("Search");
-//
+
         rew = (RecyclerView) findViewById(R.id.rew);
         rew.setLayoutManager(new LinearLayoutManager(this));
 
@@ -134,7 +134,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-//
 
     }
 }
