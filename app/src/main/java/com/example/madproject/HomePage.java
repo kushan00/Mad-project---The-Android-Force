@@ -9,8 +9,8 @@ import android.widget.Button;
 
 public class HomePage extends AppCompatActivity {
 
-    private Button clientbtn , adminbtn;
-
+    private Button clientbtn , adminbtn,btn;
+      
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +39,6 @@ public class HomePage extends AppCompatActivity {
             }
         });
 
-
+   
     }
 }
