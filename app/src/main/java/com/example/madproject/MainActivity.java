@@ -19,7 +19,7 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
-
+//
 public class MainActivity extends AppCompatActivity {
     RecyclerView rew;
     myadapter adapter;
