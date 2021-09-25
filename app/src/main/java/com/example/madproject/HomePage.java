@@ -33,7 +33,7 @@ public class HomePage extends AppCompatActivity {
         adminbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(HomePage.this,LoginActivity.class);
+                Intent i = new Intent(HomePage.this,AdminLoginActivity.class);
                 startActivity(i);
                 finish();
             }

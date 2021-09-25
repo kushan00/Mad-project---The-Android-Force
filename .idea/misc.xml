@@ -3,20 +3,31 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Max/AndroidStudioProjects/MADproject/app/src/main/res/drawable-v24/progress_back.xml" value="0.1712962962962963" />
         <entry key="..\:/Users/Max/AndroidStudioProjects/MADproject/app/src/main/res/drawable/custom_button_back.xml" value="0.20046296296296295" />
         <entry key="..\:/Users/Max/AndroidStudioProjects/MADproject/app/src/main/res/drawable/progress_back.xml" value="0.20046296296296295" />
         <entry key="..\:/Users/Max/AndroidStudioProjects/MADproject/app/src/main/res/drawable/round_drawable.xml" value="0.20046296296296295" />
-        <entry key="..\:/Users/Max/AndroidStudioProjects/MADproject/app/src/main/res/layout/activity_add_payment.xml" value="0.2" />
+        <entry key="..\:/Users/Max/AndroidStudioProjects/MADproject/app/src/main/res/layout/CusSinglerow.xml" value="0.1361111111111111" />
+        <entry key="..\:/Users/Max/AndroidStudioProjects/MADproject/app/src/main/res/layout/activity_add_payment.xml" value="0.25" />
+        <entry key="..\:/Users/Max/AndroidStudioProjects/MADproject/app/src/main/res/layout/activity_adddata.xml" value="0.1" />
+        <entry key="..\:/Users/Max/AndroidStudioProjects/MADproject/app/src/main/res/layout/activity_admin_login.xml" value="0.22" />
+        <entry key="..\:/Users/Max/AndroidStudioProjects/MADproject/app/src/main/res/layout/activity_all_food.xml" value="0.18611111111111112" />
+        <entry key="..\:/Users/Max/AndroidStudioProjects/MADproject/app/src/main/res/layout/activity_cus_food_display.xml" value="0.18611111111111112" />
         <entry key="..\:/Users/Max/AndroidStudioProjects/MADproject/app/src/main/res/layout/activity_cus_payment_details.xml" value="0.1" />
         <entry key="..\:/Users/Max/AndroidStudioProjects/MADproject/app/src/main/res/layout/activity_edit_payment.xml" value="0.18611111111111112" />
         <entry key="..\:/Users/Max/AndroidStudioProjects/MADproject/app/src/main/res/layout/activity_home_page.xml" value="0.18611111111111112" />
         <entry key="..\:/Users/Max/AndroidStudioProjects/MADproject/app/src/main/res/layout/activity_login.xml" value="0.1852355072463768" />
-        <entry key="..\:/Users/Max/AndroidStudioProjects/MADproject/app/src/main/res/layout/activity_main.xml" value="0.14" />
+        <entry key="..\:/Users/Max/AndroidStudioProjects/MADproject/app/src/main/res/layout/activity_main.xml" value="0.21" />
         <entry key="..\:/Users/Max/AndroidStudioProjects/MADproject/app/src/main/res/layout/activity_payment_details.xml" value="0.18611111111111112" />
         <entry key="..\:/Users/Max/AndroidStudioProjects/MADproject/app/src/main/res/layout/activity_registration.xml" value="0.16" />
         <entry key="..\:/Users/Max/AndroidStudioProjects/MADproject/app/src/main/res/layout/bottom_sheet_dialog.xml" value="0.14" />
+        <entry key="..\:/Users/Max/AndroidStudioProjects/MADproject/app/src/main/res/layout/cusfood.xml" value="0.18611111111111112" />
+        <entry key="..\:/Users/Max/AndroidStudioProjects/MADproject/app/src/main/res/layout/cussinglerow.xml" value="0.1" />
+        <entry key="..\:/Users/Max/AndroidStudioProjects/MADproject/app/src/main/res/layout/dialogcontent.xml" value="0.1" />
         <entry key="..\:/Users/Max/AndroidStudioProjects/MADproject/app/src/main/res/layout/payment_rv_details.xml" value="0.18611111111111112" />
+        <entry key="..\:/Users/Max/AndroidStudioProjects/MADproject/app/src/main/res/layout/singlerow.xml" value="0.18611111111111112" />
         <entry key="..\:/Users/Max/AndroidStudioProjects/MADproject/app/src/main/res/menu/menu_main.xml" value="0.18611111111111112" />
+        <entry key="..\:/Users/Max/AndroidStudioProjects/MADproject/app/src/main/res/menu/searchmenu.xml" value="0.1" />
       </map>
     </option>
   </component>

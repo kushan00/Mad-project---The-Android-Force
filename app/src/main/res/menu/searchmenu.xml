@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/search"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:title="Search Food Items.."
+        app:showAsAction="always"
+
+        app:actionViewClass="android.widget.SearchView"
+        />
+
+    <item android:id="@+id/idCustomerD"
+        android:title="Customer Details"/>
+    <item android:id="@+id/idPaymentD"
+        android:title="Payment Details"/>
+    <item android:id="@+id/idDeliveryD"
+        android:title="Delivery Details"/>
+    <item
+        android:id="@+id/idAdminLogOut"
+
+        android:icon="@drawable/ic_loggout"
+        android:title="Log Out"
+
+        />
+
+
+</menu>

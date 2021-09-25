@@ -4,113 +4,102 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
+    android:background="@drawable/k"
     android:alpha="0.8"
-    tools:context=".LoginActivity">
+    tools:context=".AdminLoginActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:layout_marginBottom="910dp"
+        android:background="@color/red"
+        android:fontFamily="sans-serif-smallcaps"
+        android:gravity="center"
+        android:text="Admin Login"
+        android:textColor="#DAD8D8"
+        android:textSize="30sp"
+        android:textStyle="bold|italic" />
 
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="314dp"
-        android:layout_height="138dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="46dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logomain" />
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/idTILUserName1"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/idTILUserName"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="140dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginTop="60dp"
-        android:hint="Enter user name"
-        style="@style/TextInputLayout"
-        android:layout_below="@id/imageView"
+        android:hint="Enter User Name"
         android:padding="5dp"
         android:textColorHint="@color/white"
         app:hintTextColor="@color/white">
+
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/idEdtUserName1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/idEdtUserName"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:textStyle="bold"
             android:importantForAutofill="no"
             android:inputType="textEmailAddress"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
-            android:textSize="14sp"/>
+            android:textSize="34sp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
+
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/idTILPassword1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/idTILPassword"
-        android:layout_below="@id/idTILUserName"
+        android:layout_below="@id/idTILUserName1"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginTop="20dp"
         android:hint="Enter your Password"
-        style="@style/TextInputLayout"
         android:padding="5dp"
         android:textColorHint="@color/white"
         app:hintTextColor="@color/white">
+
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/idEdtPassword1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/idEdtPwd"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:textStyle="bold"
             android:importantForAutofill="no"
             android:inputType="textPassword"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
-            android:textSize="14sp"/>
-
+            android:textSize="24sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
-
-   ]
-
     <Button
-        android:id="@+id/idBtnLogin"
+        android:id="@+id/idBtnadminLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/idTILPassword"
-        android:layout_marginStart="20dp"
+        android:layout_below="@id/idTILPassword1"
+        android:layout_marginStart="25dp"
         android:layout_marginTop="40dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/custom_button_back"
-        android:text="Login"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/button_back"
+        android:text="Admin Login "
         android:textAllCaps="false"
-        android:textColor="@color/white"
-        app:backgroundTint="#24DA04" />
+        android:textSize="21dp" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="New User ? register Here"
-        android:textColor="@color/white"
-        android:textAllCaps="false"
-        android:textAlignment="center"
-        android:gravity="center"
-        android:layout_below="@id/idBtnLogin"
-        android:layout_marginTop="30dp"
-        android:textSize="18sp"
-        android:id="@+id/idTVRegister"/>
 
     <ProgressBar
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:id="@+id/idPBLoding"
+        android:id="@+id/idPBLoading1"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/idBtnLogin"
+        android:layout_marginTop="10dp"
         android:indeterminate="true"
         android:indeterminateDrawable="@drawable/progress_back"
-        android:visibility="gone"
-        />
+        android:visibility="gone"/>
 
 
 </RelativeLayout>
