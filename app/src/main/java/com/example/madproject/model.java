@@ -8,7 +8,7 @@ public class model
     }
 
     String name , description  , price ,furl;
-
+//creatte construct
     public model(String name, String description, String price, String furl) {
         this.name = name;
         this.description = description;
