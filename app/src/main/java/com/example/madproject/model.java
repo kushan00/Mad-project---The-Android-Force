@@ -19,6 +19,7 @@ public class model
     public String getName() {
         return name;
     }
+    //comitt
 
     public void setName(String name) {
         this.name = name;
