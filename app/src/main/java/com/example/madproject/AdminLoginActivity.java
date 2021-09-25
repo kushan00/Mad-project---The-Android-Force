@@ -62,7 +62,7 @@ public class AdminLoginActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         
                         //chck login 
-
+//chwck
                         if (task.isSuccessful()) {
 
                             loadingPB1.setVisibility(View.GONE);
