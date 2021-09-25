@@ -61,7 +61,7 @@ public class AdminLoginActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         
-                        //chck 
+                        //chck login 
 
                         if (task.isSuccessful()) {
 
