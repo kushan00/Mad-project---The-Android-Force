@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mAuth = FirebaseAuth.getInstance();
         setTitle("Search");
-//
+
         rew = (RecyclerView) findViewById(R.id.rew);
         rew.setLayoutManager(new LinearLayoutManager(this));
 
