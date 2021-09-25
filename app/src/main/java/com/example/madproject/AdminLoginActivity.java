@@ -42,7 +42,7 @@ public class AdminLoginActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         loadingPB1 = findViewById(R.id.idPBLoading1);
 
-//login part
+//login
         loginBtn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
