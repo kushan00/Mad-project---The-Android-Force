@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class HomePage extends AppCompatActivity {
 
-    private Button clientbtn , adminbtn,btn;
+    private Button clientbtn , adminbtn;
       
     @Override
     protected void onCreate(Bundle savedInstanceState) {
