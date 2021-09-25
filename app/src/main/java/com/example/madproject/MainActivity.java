@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     FloatingActionButton fb;
     private FirebaseAuth mAuth;
     private Menu menu;
-
+//
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -134,7 +134,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-//
 
     }
 }
