@@ -27,7 +27,7 @@ public class LoginActivity extends AppCompatActivity {
     private TextView RegisterTV;
     private FirebaseAuth mAuth;
 
-      //hiii
+      
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
