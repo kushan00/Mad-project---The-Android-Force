@@ -5,7 +5,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-//
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mAuth = FirebaseAuth.getInstance();
         setTitle("Search");
-
+//
         rew = (RecyclerView) findViewById(R.id.rew);
         rew.setLayoutManager(new LinearLayoutManager(this));
 
@@ -134,7 +134,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-
+//
 
     }
 }
