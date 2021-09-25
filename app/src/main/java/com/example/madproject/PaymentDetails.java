@@ -32,7 +32,7 @@ import org.w3c.dom.Text;
 import java.util.ArrayList;
 
 public class PaymentDetails extends AppCompatActivity implements PaymentRVAdapter.PaymentCLickInterface {
-
+//pay
     private RecyclerView paymentRV;
     private ProgressBar loadingPB;
     private FloatingActionButton addFAB;
