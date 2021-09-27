@@ -31,6 +31,7 @@ public class cusadapter extends FirebaseRecyclerAdapter<cusmodel,cusadapter.cusv
         holder.name1.setText(model.getName());
         holder.description1.setText(model.getDescription());
         holder.price1.setText(model.getPrice());
+        Glide.with(holder.img2.getContext()).load(model.getFurl()).into(holder.img2);
         Glide.with(holder.img1.getContext()).load(model.getFurl()).into(holder.img1);
 
         holder.img1.setOnClickListener(new View.OnClickListener() {
@@ -60,7 +61,7 @@ public class cusadapter extends FirebaseRecyclerAdapter<cusmodel,cusadapter.cusv
     class cusviewholder extends RecyclerView.ViewHolder
 
    {
-       ImageView  img1;
+       ImageView  img1 , img2;
        TextView name1,description1,price1;
 
        public cusviewholder(@NonNull View itemView) {
@@ -69,7 +70,7 @@ public class cusadapter extends FirebaseRecyclerAdapter<cusmodel,cusadapter.cusv
            description1=(TextView)itemView.findViewById(R.id.descriptiontext);
            price1=(TextView)itemView.findViewById(R.id.pricetext);
            img1=(ImageView)itemView.findViewById(R.id.buy);
-
+           img2=(CircleImageView)itemView.findViewById(R.id.img1);
 
        }
 
