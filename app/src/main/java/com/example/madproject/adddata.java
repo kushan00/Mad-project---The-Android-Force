@@ -66,7 +66,7 @@ public class adddata extends AppCompatActivity
 
 
 
-
+//usw object map
     }
 
     private void processinsert()

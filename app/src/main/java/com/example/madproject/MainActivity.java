@@ -14,7 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.SearchView;
 import android.widget.Toast;
-
+//
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
+//
     @Override
     protected void onStart() {
         super.onStart();
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         super.onStop();
         adapter.stopListening();
     }
-
+//serach code 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.searchmenu, menu);
@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
+//
 
 
     @Override
@@ -132,7 +132,6 @@ public class MainActivity extends AppCompatActivity {
             default:
                 return  super.onOptionsItemSelected(item);
         }
-
 
 
 

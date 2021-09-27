@@ -8,7 +8,7 @@ public class model
     }
 
     String name , description  , price ,furl;
-
+//creatte construct
     public model(String name, String description, String price, String furl) {
         this.name = name;
         this.description = description;
@@ -19,6 +19,7 @@ public class model
     public String getName() {
         return name;
     }
+    //comitt
 
     public void setName(String name) {
         this.name = name;
