@@ -71,7 +71,7 @@ public class cusadapter extends FirebaseRecyclerAdapter<cusmodel,cusadapter.cusv
            price1=(TextView)itemView.findViewById(R.id.pricetext);
            img=(ImageView)itemView.findViewById(R.id.buy);
            img2=(CircleImageView)itemView.findViewById(R.id.img1);
-
+//ssss
        }
 
    }
