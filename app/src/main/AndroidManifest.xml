@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MADproject">
         <activity
+            android:name=".PaymentCalculator"
+            android:exported="true" />
+        <activity
             android:name=".CusFoodDisplay"
             android:exported="true" />
         <activity
@@ -46,7 +49,7 @@
             android:name=".MainActivity"
             android:exported="true" />
         <activity
-            android:name=".AllFood"
+            android:name=".CustomerFood"
             android:exported="true" />
         <activity
             android:name=".AdminLoginActivity"

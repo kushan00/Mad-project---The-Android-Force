@@ -8,6 +8,16 @@
     android:alpha="0.8"
     tools:context=".RegistrationActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Register Now"
+        android:textAllCaps="false"
+        android:textSize="40sp"
+        android:textColor="@color/white"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="40dp"
+        />
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,7 +26,6 @@
         android:layout_marginEnd="20dp"
         android:layout_marginTop="140dp"
         android:hint="Enter user name"
-        style="@style/TextInputLayout"
         android:padding="5dp"
         android:textColorHint="@color/white"
         app:hintTextColor="@color/white">
@@ -41,7 +50,6 @@
         android:layout_marginEnd="20dp"
         android:layout_marginTop="20dp"
         android:hint="Enter your Password"
-        style="@style/TextInputLayout"
         android:padding="5dp"
         android:textColorHint="@color/white"
         app:hintTextColor="@color/white">
@@ -66,7 +74,6 @@
         android:layout_marginEnd="20dp"
         android:layout_marginTop="20dp"
         android:hint="Enter password again"
-        style="@style/TextInputLayout"
         android:padding="5dp"
         android:textColorHint="@color/white"
         app:hintTextColor="@color/white">
@@ -106,7 +113,8 @@
         android:gravity="center"
         android:layout_below="@id/idBtnRegister"
         android:layout_marginTop="30dp"
-        android:textSize="18sp"
+        android:textSize="24sp"
+        android:textStyle="bold"
         android:id="@+id/idTVLogin"/>
 
     <ProgressBar

@@ -11,6 +11,8 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -44,6 +46,8 @@ public class EditPaymentActivity extends AppCompatActivity {
         BankNameEDT = findViewById(R.id.idEDTbankname);
         AccountnumEDT = findViewById(R.id.idEDTAccountNum);
         CvvEDT = findViewById(R.id.idEDTCvv);
+        FirebaseUser user =  FirebaseAuth.getInstance().getCurrentUser();
+        String uid = user.getUid().toString();
         UpdatePaymentBTN = findViewById(R.id.idBtnUpdatePayment);
         DeletePaymentBTN = findViewById(R.id.idBtnDeletePayment);
         loadingPB = findViewById(R.id.idPBloading);
@@ -58,7 +62,7 @@ public class EditPaymentActivity extends AppCompatActivity {
             BankNameEDT.setText(paymentDetialsRVModal.getBankname());
             AccountnumEDT.setText(paymentDetialsRVModal.getAccNumber());
             CvvEDT.setText(paymentDetialsRVModal.getCvv());
-            RegID = paymentDetialsRVModal.getRegID();
+            RegID = uid;
         }
 
         databaseReference = firebaseDatabase.getReference("Payment Details").child(RegID);
@@ -88,10 +92,11 @@ public class EditPaymentActivity extends AppCompatActivity {
                 databaseReference.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        loadingPB.setVisibility(View.GONE);
                         databaseReference.updateChildren(map);
-                        Toast.makeText(EditPaymentActivity.this, "Payment Details Updated", Toast.LENGTH_SHORT).show();
+                        loadingPB.setVisibility(View.GONE);
                         startActivity(new Intent(EditPaymentActivity.this,PaymentDetails.class));
+                        Toast.makeText(EditPaymentActivity.this, "Payment Details Updated", Toast.LENGTH_SHORT).show();
+
                     }
 
                     @Override

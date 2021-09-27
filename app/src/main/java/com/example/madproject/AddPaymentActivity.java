@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
      
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -47,6 +48,9 @@ public class AddPaymentActivity extends AppCompatActivity {
         firebaseDatabase = firebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("Payment Details");
 
+        FirebaseUser user =  FirebaseAuth.getInstance().getCurrentUser();
+        String uid = user.getUid().toString();
+
         SavePaymentBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,29 +62,34 @@ public class AddPaymentActivity extends AppCompatActivity {
                 String Bank = BankNameEDT.getText().toString();
                 String AccNumber = AccountnumEDT.getText().toString();
                 String cvv = CvvEDT.getText().toString();
-                RegID = Uname;
+                RegID = uid;
 
-                PaymentDetialsRVModal PaymentDetialsRVModal = new PaymentDetialsRVModal(Uname,Fname,Address,Phone,Bank,AccNumber,cvv,RegID);
+                if (TextUtils.isEmpty(Uname) && TextUtils.isEmpty(Fname) && TextUtils.isEmpty(Address) && TextUtils.isEmpty(Phone) && TextUtils.isEmpty(Bank) && TextUtils.isEmpty(AccNumber) && TextUtils.isEmpty(cvv)) {
+                    Toast.makeText(AddPaymentActivity.this, "Please enter all Details!", Toast.LENGTH_SHORT).show();
+                    return;
+                } else {
+                    PaymentDetialsRVModal PaymentDetialsRVModal = new PaymentDetialsRVModal(Uname, Fname, Address, Phone, Bank, AccNumber, cvv, RegID);
 
-                databaseReference.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        loadingPB.setVisibility(View.GONE);
-                        databaseReference.child(RegID).setValue(PaymentDetialsRVModal);
-                        Toast.makeText(AddPaymentActivity.this, "Details Saved Successfully!", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(AddPaymentActivity.this,PaymentDetails.class));
+                    databaseReference.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            loadingPB.setVisibility(View.GONE);
+                            databaseReference.child(RegID).setValue(PaymentDetialsRVModal);
+                            Toast.makeText(AddPaymentActivity.this, "Details Saved Successfully!", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(AddPaymentActivity.this, PaymentDetails.class));
 
-                    }
+                        }
 
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
-                        Toast.makeText(AddPaymentActivity.this, "Error is "+error.toString(), Toast.LENGTH_SHORT).show();
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+                            Toast.makeText(AddPaymentActivity.this, "Error is " + error.toString(), Toast.LENGTH_SHORT).show();
 
-                    }
-                });
+                        }
+                    });
 
+                }
             }
-        });
+            });
 
     }
 }

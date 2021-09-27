@@ -36,8 +36,8 @@ public class PaymentRVAdapter extends RecyclerView.Adapter<PaymentRVAdapter.View
     @Override
     public void onBindViewHolder(@NonNull PaymentRVAdapter.ViewHolder holder, int position) {
             PaymentDetialsRVModal paymentDetialsRVModal = paymentDetialsRVModalArrayList.get(position);
-            holder.regidTV.setText(paymentDetialsRVModal.getRegID());
-            holder.fullNameTV.setText(paymentDetialsRVModal.getFullname());
+            holder.regidTV.setText(paymentDetialsRVModal.getFullname());
+            holder.fullNameTV.setText(paymentDetialsRVModal.getPhone());
             holder.addressTV.setText(paymentDetialsRVModal.getAddress());
             holder.accNUmberTV.setText(paymentDetialsRVModal.getAccNumber());
             setAnimation(holder.itemView, position);

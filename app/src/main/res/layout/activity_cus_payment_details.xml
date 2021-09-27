@@ -50,7 +50,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-
+                    android:id="@+id/idEDTUnameD"
                     android:drawablePadding="10dp"/>
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -66,7 +66,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-
+                    android:id="@+id/idEDTfullnameD"
                     android:drawablePadding="10dp" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -81,7 +81,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-
+                    android:id="@+id/idEDTphoneD"
                     android:drawablePadding="10dp" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -97,6 +97,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawablePadding="10dp"
+                    android:id="@+id/idEDTaddrressD"
                      />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -112,6 +113,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/idEDTbanknameD"
                     android:drawablePadding="10dp"
                     />
 
@@ -129,6 +131,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/idEDTaccNumberD"
                     android:drawablePadding="10dp"
                     />
 
@@ -146,6 +149,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/idEDTcvvD"
                     android:drawablePadding="10dp"
                     />
 

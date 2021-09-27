@@ -55,7 +55,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Account Number :- "
+            android:text="Account number :- "
             android:id="@+id/idTVaccNumber"
             android:layout_below="@id/idTVAddress"
             android:textColor="@color/white"

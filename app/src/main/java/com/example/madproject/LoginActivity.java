@@ -68,7 +68,7 @@ public class LoginActivity extends AppCompatActivity {
                           if(task.isSuccessful()) {
                               loadingPB.setVisibility(View.GONE);
                               Toast.makeText(LoginActivity.this, "Login Successfull!!", Toast.LENGTH_SHORT).show();
-                              Intent i = new Intent(LoginActivity.this, PaymentDetails.class);
+                              Intent i = new Intent(LoginActivity.this, CustomerFood.class);
                               startActivity(i);
                               finish();
 
@@ -84,12 +84,15 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
+
+
+
     @Override
     protected void onStart() {
         super.onStart();
         FirebaseUser user = mAuth.getCurrentUser();
         if(user!=null){
-            Intent i = new Intent(LoginActivity.this,PaymentDetails.class);
+            Intent i = new Intent(LoginActivity.this,CustomerFood.class);
             startActivity(i);
             this.finish();
         }

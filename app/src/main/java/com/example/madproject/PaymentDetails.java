@@ -21,6 +21,7 @@ import android.widget.Toast;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -54,6 +55,8 @@ public class PaymentDetails extends AppCompatActivity implements PaymentRVAdapte
         loadingPB = findViewById(R.id.idPBLoding);
         addFAB = findViewById(R.id.idAddFAB);
         firebaseDatabase = FirebaseDatabase.getInstance();
+        FirebaseUser user =  FirebaseAuth.getInstance().getCurrentUser();
+        String uid = user.getUid().toString();
         databaseReference = firebaseDatabase.getReference("Payment Details");
         paymentDetialsRVModalArrayList = new ArrayList<>();
         BottemsheetRL = findViewById(R.id.idRLBottomsheet);
@@ -83,19 +86,19 @@ public class PaymentDetails extends AppCompatActivity implements PaymentRVAdapte
 
             @Override
             public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-                loadingPB.setVisibility(View.GONE);
+                //loadingPB.setVisibility(View.GONE);
                 paymentRVAdapter.notifyDataSetChanged();
             }
 
             @Override
             public void onChildRemoved(@NonNull DataSnapshot snapshot) {
-                loadingPB.setVisibility(View.GONE);
+                //loadingPB.setVisibility(View.GONE);
                 paymentRVAdapter.notifyDataSetChanged();
             }
 
             @Override
             public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-                loadingPB.setVisibility(View.GONE);
+                //loadingPB.setVisibility(View.GONE);
                 paymentRVAdapter.notifyDataSetChanged();
             }
 
@@ -125,8 +128,8 @@ public class PaymentDetails extends AppCompatActivity implements PaymentRVAdapte
         Button editBTN = layout.findViewById(R.id.idBTNeditPdetails);
 
 
-        registerid.setText(paymentDetialsRVModal.getRegID());
-        fullname.setText(paymentDetialsRVModal.getFullname());
+        registerid.setText(paymentDetialsRVModal.getFullname());
+        fullname.setText(paymentDetialsRVModal.getPhone());
         accountnum.setText(paymentDetialsRVModal.getAccNumber());
 
         editBTN.setOnClickListener(new View.OnClickListener() {
@@ -161,6 +164,11 @@ public class PaymentDetails extends AppCompatActivity implements PaymentRVAdapte
             case R.id.idPaymentD:
                 Intent pd = new Intent(PaymentDetails.this,CusPaymentDetails.class);
                 startActivity(pd);
+                this.finish();
+                return  true;
+            case R.id.idMenuD:
+                Intent d = new Intent(PaymentDetails.this,CustomerFood.class);
+                startActivity(d);
                 this.finish();
                 return  true;
             default:

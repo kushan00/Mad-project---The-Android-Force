@@ -51,7 +51,7 @@
                 android:elevation="6dp"
                 android:ems="10"
                 android:alpha="0.9"
-                  android:textStyle="bold"
+                android:textStyle="bold"
                 android:hint="Food Name "
                 android:paddingStart="13dp"
                 android:textColor="@color/white"
