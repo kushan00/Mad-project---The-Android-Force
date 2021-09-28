@@ -125,7 +125,7 @@ public class Disaplay_delivey_details extends AppCompatActivity implements Deliv
         TextView cityTV = layout.findViewById(R.id.idTVCity);
         TextView contactNumber = layout.findViewById(R.id.idTVContactNUmber);
         Button editBtn = layout.findViewById(R.id.idBtnEdit);
-        Button viewBtn = layout.findViewById(R.id.idBtnView);
+
 
         customerNameTV.setText(deliveryRVModal.getCustomerName());
         buildingNumberTV.setText(deliveryRVModal.getBuildingNumber());
