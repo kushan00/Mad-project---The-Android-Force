@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_shade_1"
+    android:id="@+id/idRLBSheet"
+    >
+
+    <TextView
+        android:id="@+id/idTVCustomer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:text="Customer Name"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:padding="3dp"
+        android:textStyle="bold"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/idTVBuilding"
+        android:layout_centerVertical="true"
+        android:textColor="@color/white"
+        android:layout_below="@id/idTVCustomer"
+        android:textSize="18sp"
+        android:text="Building Number"
+        android:padding="3dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/idTVStreet"
+        android:layout_centerVertical="true"
+        android:textColor="@color/white"
+        android:layout_below="@id/idTVBuilding"
+        android:textSize="18sp"
+        android:text="Street Name"
+        android:padding="3dp"
+        android:textStyle="bold"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/idTVCity"
+        android:layout_centerVertical="true"
+        android:textColor="@color/white"
+        android:layout_below="@id/idTVStreet"
+        android:textSize="18sp"
+        android:text="City"
+        android:padding="3dp"
+        android:textStyle="bold"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/idTVContactNUmber"
+        android:layout_centerVertical="true"
+        android:textColor="@color/white"
+        android:layout_below="@id/idTVCity"
+        android:textSize="18sp"
+        android:text="Contact Number"
+        android:padding="3dp"
+        android:textStyle="bold"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_below="@id/idTVContactNUmber"
+        >
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:text="Edit Delivery"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:backgroundTint="#24DA04"
+            android:id="@+id/idBtnEdit"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:text="View Delivery"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:backgroundTint="#24DA04"
+            android:id="@+id/idBtnView"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

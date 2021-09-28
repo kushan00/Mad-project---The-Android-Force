@@ -13,10 +13,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MADproject">
         <activity
-            android:name=".PaymentCalculator"
+            android:name=".SuccessPage"
             android:exported="true" />
         <activity
-            android:name=".CusFoodDisplay"
+            android:name=".AddDeliveryActivity"
+            android:exported="true" />
+        <activity
+            android:name=".EditDeliveryActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Disaplay_delivey_details"
             android:exported="true" />
         <activity
             android:name=".CusPaymentDetails"

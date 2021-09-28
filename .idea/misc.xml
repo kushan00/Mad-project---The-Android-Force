@@ -8,6 +8,7 @@
         <entry key="..\:/Users/Max/AndroidStudioProjects/MADproject/app/src/main/res/drawable/progress_back.xml" value="0.20046296296296295" />
         <entry key="..\:/Users/Max/AndroidStudioProjects/MADproject/app/src/main/res/drawable/round_drawable.xml" value="0.20046296296296295" />
         <entry key="..\:/Users/Max/AndroidStudioProjects/MADproject/app/src/main/res/layout/CusSinglerow.xml" value="0.1361111111111111" />
+        <entry key="..\:/Users/Max/AndroidStudioProjects/MADproject/app/src/main/res/layout/activity_add_delivery.xml" value="0.18611111111111112" />
         <entry key="..\:/Users/Max/AndroidStudioProjects/MADproject/app/src/main/res/layout/activity_add_payment.xml" value="0.25" />
         <entry key="..\:/Users/Max/AndroidStudioProjects/MADproject/app/src/main/res/layout/activity_adddata.xml" value="0.1" />
         <entry key="..\:/Users/Max/AndroidStudioProjects/MADproject/app/src/main/res/layout/activity_admin_login.xml" value="0.22" />
@@ -22,7 +23,9 @@
         <entry key="..\:/Users/Max/AndroidStudioProjects/MADproject/app/src/main/res/layout/activity_payment_calculator.xml" value="0.18611111111111112" />
         <entry key="..\:/Users/Max/AndroidStudioProjects/MADproject/app/src/main/res/layout/activity_payment_details.xml" value="0.18611111111111112" />
         <entry key="..\:/Users/Max/AndroidStudioProjects/MADproject/app/src/main/res/layout/activity_registration.xml" value="0.16" />
+        <entry key="..\:/Users/Max/AndroidStudioProjects/MADproject/app/src/main/res/layout/activity_success_page.xml" value="0.18611111111111112" />
         <entry key="..\:/Users/Max/AndroidStudioProjects/MADproject/app/src/main/res/layout/bottom_sheet_dialog.xml" value="0.14" />
+        <entry key="..\:/Users/Max/AndroidStudioProjects/MADproject/app/src/main/res/layout/bottom_sheet_dialog_disa.xml" value="0.18611111111111112" />
         <entry key="..\:/Users/Max/AndroidStudioProjects/MADproject/app/src/main/res/layout/cusfood.xml" value="0.1" />
         <entry key="..\:/Users/Max/AndroidStudioProjects/MADproject/app/src/main/res/layout/cussinglerow.xml" value="0.1" />
         <entry key="..\:/Users/Max/AndroidStudioProjects/MADproject/app/src/main/res/layout/dialogcontent.xml" value="0.1" />
