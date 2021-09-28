@@ -98,7 +98,7 @@ public class EditDeliveryActivity extends AppCompatActivity {
                          databaseReference.updateChildren(map);
                         startActivity(new Intent(EditDeliveryActivity.this,Disaplay_delivey_details.class));
                         Toast.makeText(EditDeliveryActivity.this, "Delivery Info Update", Toast.LENGTH_SHORT).show();
-
+                            finish();
                     }
 
                     @Override
@@ -120,8 +120,9 @@ public class EditDeliveryActivity extends AppCompatActivity {
 
     private void deleteDelivery(){
         databaseReference.removeValue();
-        Toast.makeText(this, " Delivery Info id Deleted", Toast.LENGTH_SHORT).show();
         startActivity(new Intent(EditDeliveryActivity.this,Disaplay_delivey_details.class));
+        Toast.makeText(this, " Delivery Info id Deleted", Toast.LENGTH_SHORT).show();
+        finish();
     }
 
     public void popTimePicker(View view) {
