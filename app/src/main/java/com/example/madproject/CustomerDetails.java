@@ -81,7 +81,7 @@ public class CustomerDetails extends AppCompatActivity implements CustomerRVAdap
 
             @Override
             public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-                loadingPB.setVisibility(View.GONE);
+               // loadingPB.setVisibility(View.GONE);
                 customerRVAdapter.notifyDataSetChanged();
             }
 
@@ -125,8 +125,8 @@ public class CustomerDetails extends AppCompatActivity implements CustomerRVAdap
         Button editBTN = layout.findViewById(R.id.idBTNeditCdetails);
 
 
-        customerId.setText(customerRVModel.getCustomerID());
-        customerName.setText(customerRVModel.getCustomerName());
+        customerId.setText(customerRVModel.getCustomerName());
+        customerName.setText(customerRVModel.getCustomerEmail());
         NIC.setText(customerRVModel.getCustomerNic());
 
         editBTN.setOnClickListener(new View.OnClickListener() {

@@ -2,6 +2,7 @@ package com.example.madproject;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -58,26 +59,29 @@ public class AddCustomerActivity extends AppCompatActivity {
                 String customerNic = customerNicEdt.getText().toString();
                 customerID = uid;
 
-                CustomerRVModel customerRVModel = new CustomerRVModel(fullName,customerName,customerAddress,
-                        customerPhone,customerEmail,customerNic,customerID);
+                if (TextUtils.isEmpty(customerName) && TextUtils.isEmpty(fullName) && TextUtils.isEmpty(customerName) && TextUtils.isEmpty(customerAddress) && TextUtils.isEmpty(customerPhone) && TextUtils.isEmpty(customerEmail) && TextUtils.isEmpty(customerNic)) {
+                    Toast.makeText(AddCustomerActivity.this, "Please enter all Details!", Toast.LENGTH_SHORT).show();
+                    return;
+                } else {
+                    CustomerRVModel customerRVModel = new CustomerRVModel(fullName, customerName, customerAddress,
+                            customerPhone, customerEmail, customerNic, customerID);
 
-                databaseReference.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        loadingPB.setVisibility(View.GONE);
-                        databaseReference.child(customerID).setValue(customerRVModel);
-                        Toast.makeText(AddCustomerActivity.this, "Customer Added..", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(AddCustomerActivity.this,CustomerDetails.class));
-                        
-                    }
+                    databaseReference.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            loadingPB.setVisibility(View.GONE);
+                            databaseReference.child(customerID).setValue(customerRVModel);
+                            startActivity(new Intent(AddCustomerActivity.this, CustomerDetails.class));
+                            Toast.makeText(AddCustomerActivity.this, "Customer Added..", Toast.LENGTH_SHORT).show();
+                        }
 
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
-                        Toast.makeText(AddCustomerActivity.this, "Error is" + error.toString(), Toast.LENGTH_SHORT).show();
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+                            Toast.makeText(AddCustomerActivity.this, "Error is" + error.toString(), Toast.LENGTH_SHORT).show();
 
-                    }
-                });
-
+                        }
+                    });
+                }
 
             }
         });

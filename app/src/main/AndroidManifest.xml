@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MADproject">
         <activity
+            android:name=".BuyFoodActivity"
+            android:exported="true" />
+        <activity
             android:name=".SuccessPage"
             android:exported="true" />
         <activity
@@ -62,6 +65,15 @@
             android:exported="true" />
         <activity
             android:name=".adddata"
+            android:exported="true" />
+        <activity
+            android:name=".CustomerDetails"
+            android:exported="true" />
+        <activity
+            android:name=".AddCustomerActivity"
+            android:exported="true" />
+        <activity
+            android:name=".EditAccountActivity"
             android:exported="true" />
     </application>
 

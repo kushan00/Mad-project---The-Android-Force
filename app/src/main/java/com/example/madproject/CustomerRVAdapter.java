@@ -36,8 +36,8 @@ public class CustomerRVAdapter extends RecyclerView.Adapter<CustomerRVAdapter.Vi
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder,int position) {
         CustomerRVModel customerRVModel = customerRVModelArrayList.get(position);
-        holder.customerIDTV.setText(customerRVModel.getCustomerID());
-        holder.customerNameTV.setText(customerRVModel.getCustomerName());
+        holder.customerIDTV.setText(customerRVModel.getCustomerName());
+        holder.customerNameTV.setText(customerRVModel.getCustomerEmail());
         holder.customerAddressTV.setText(customerRVModel.getCustomerAddress());
         holder.customerNICTV.setText(customerRVModel.getCustomerNic());
         setAnimation(holder.itemView, position);

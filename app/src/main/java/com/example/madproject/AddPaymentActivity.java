@@ -75,8 +75,8 @@ public class AddPaymentActivity extends AppCompatActivity {
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
                             loadingPB.setVisibility(View.GONE);
                             databaseReference.child(RegID).setValue(PaymentDetialsRVModal);
-                            Toast.makeText(AddPaymentActivity.this, "Details Saved Successfully!", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(AddPaymentActivity.this, AddDeliveryActivity.class));
+                            Toast.makeText(AddPaymentActivity.this, "Details Saved Successfully!", Toast.LENGTH_SHORT).show();
 
                         }
 
@@ -89,7 +89,7 @@ public class AddPaymentActivity extends AppCompatActivity {
 
                 }
             }
-            });
+        });
 
     }
 }

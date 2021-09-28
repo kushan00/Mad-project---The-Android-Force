@@ -59,9 +59,9 @@ public class myadapter extends FirebaseRecyclerAdapter<model,myadapter.myviewhol
 
                View myview = dialogPlus.getHolderView();
                EditText name = myview.findViewById(R.id.uname);
-               EditText description = myview.findViewById(R.id.udescription);
                EditText price = myview.findViewById(R.id.uprice);
                EditText furl = myview.findViewById(R.id.uimgurl);
+               EditText description = myview.findViewById(R.id.udescription);
                Button submit= myview.findViewById(R.id.usubmit);
 
 

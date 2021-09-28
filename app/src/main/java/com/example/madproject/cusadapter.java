@@ -1,22 +1,21 @@
 package com.example.madproject;
 
-
 import android.content.Context;
-import android.content.Intent;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
+        import android.content.Intent;
+        import android.view.LayoutInflater;
+        import android.view.View;
+        import android.view.ViewGroup;
+        import android.widget.ImageView;
+        import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
+        import androidx.annotation.NonNull;
+        import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
-import com.firebase.ui.database.FirebaseRecyclerAdapter;
-import com.firebase.ui.database.FirebaseRecyclerOptions;
+        import com.bumptech.glide.Glide;
+        import com.firebase.ui.database.FirebaseRecyclerAdapter;
+        import com.firebase.ui.database.FirebaseRecyclerOptions;
 
-import de.hdodenhof.circleimageview.CircleImageView;
+        import de.hdodenhof.circleimageview.CircleImageView;
 
 public class cusadapter extends FirebaseRecyclerAdapter<cusmodel,cusadapter.cusviewholder>
 
@@ -33,14 +32,7 @@ public class cusadapter extends FirebaseRecyclerAdapter<cusmodel,cusadapter.cusv
         holder.price1.setText(model.getPrice());
         Glide.with(holder.img2.getContext()).load(model.getFurl()).into(holder.img2);
 
-        holder.img.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Context context;
-                context = holder.img.getContext();
-                Intent i = new Intent(context,AddPaymentActivity.class);
-            }
-        });
+
 
     }
 
@@ -59,20 +51,19 @@ public class cusadapter extends FirebaseRecyclerAdapter<cusmodel,cusadapter.cusv
 
     class cusviewholder extends RecyclerView.ViewHolder
 
-   {
-       ImageView  img , img2;
-       TextView name1,description1,price1;
+    {
+        ImageView  img , img2;
+        TextView name1,description1,price1;
 
-       public cusviewholder(@NonNull View itemView) {
-           super(itemView);
-           name1=(TextView)itemView.findViewById(R.id.nametext);
-           description1=(TextView)itemView.findViewById(R.id.descriptiontext);
-           price1=(TextView)itemView.findViewById(R.id.pricetext);
-           img=(ImageView)itemView.findViewById(R.id.buy);
-           img2=(CircleImageView)itemView.findViewById(R.id.img1);
+        public cusviewholder(@NonNull View itemView) {
+            super(itemView);
+            name1=(TextView)itemView.findViewById(R.id.nametext);
+            description1=(TextView)itemView.findViewById(R.id.descriptiontext);
+            price1=(TextView)itemView.findViewById(R.id.pricetext);
+            img2=(CircleImageView)itemView.findViewById(R.id.img1);
 //photo
-       }
+        }
 
-   }
+    }
 
 }

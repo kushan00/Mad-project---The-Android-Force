@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -62,25 +63,30 @@ public class AddDeliveryActivity extends AppCompatActivity {
             String time = addTimeBtn.getText().toString();
 
             customerID=uid;
-            DeliveryRVModal deliveryRVModal=new DeliveryRVModal(customerName,buildingNumber,streetName,city,contactNUmber,time,customerID);
 
-            databaseReference.addValueEventListener(new ValueEventListener() {
-                @Override
-                public void onDataChange(@NonNull  DataSnapshot snapshot) {
-                    loadingPB.setVisibility(View.GONE);
-                    databaseReference.child(customerID).setValue(deliveryRVModal);
-                    startActivity(new Intent(AddDeliveryActivity.this, SuccessPage.class));
-                    Toast.makeText(AddDeliveryActivity.this, "Delivery Information is Added", Toast.LENGTH_SHORT).show();
+                if (TextUtils.isEmpty(customerName) && TextUtils.isEmpty(buildingNumber) && TextUtils.isEmpty(streetName) && TextUtils.isEmpty(city) && TextUtils.isEmpty(contactNUmber)) {
+                    Toast.makeText(AddDeliveryActivity.this, "Please enter all Details!", Toast.LENGTH_SHORT).show();
+                    return;
+                } else {
+                    DeliveryRVModal deliveryRVModal = new DeliveryRVModal(customerName, buildingNumber, streetName, city, contactNUmber, time, customerID);
+
+                    databaseReference.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            loadingPB.setVisibility(View.GONE);
+                            databaseReference.child(customerID).setValue(deliveryRVModal);
+                            startActivity(new Intent(AddDeliveryActivity.this, SuccessPage.class));
+                            Toast.makeText(AddDeliveryActivity.this, "Delivery Information is Added", Toast.LENGTH_SHORT).show();
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+
+                            Toast.makeText(AddDeliveryActivity.this, "Error is " + error.toString(), Toast.LENGTH_SHORT).show();
+
+                        }
+                    });
                 }
-
-                @Override
-                public void onCancelled(@NonNull  DatabaseError error) {
-
-                    Toast.makeText(AddDeliveryActivity.this, "Error is "+error.toString(), Toast.LENGTH_SHORT).show();
-
-                }
-            });
-
             }
         });
     }

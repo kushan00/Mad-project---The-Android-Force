@@ -162,7 +162,7 @@ public class PaymentDetails extends AppCompatActivity implements PaymentRVAdapte
                 this.finish();
                 return  true;
             case R.id.idPaymentD:
-                Intent pd = new Intent(PaymentDetails.this,CusPaymentDetails.class);
+                Intent pd = new Intent(PaymentDetails.this,PaymentDetails.class);
                 startActivity(pd);
                 this.finish();
                 return  true;

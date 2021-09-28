@@ -13,7 +13,7 @@
 
 
         android:layout_width="411dp"
-        android:layout_height="279dp"
+        android:layout_height="200dp"
         android:background="@color/black_shade_1"
         android:orientation="vertical"
         android:padding="2dp">
@@ -77,27 +77,6 @@
                     android:textSize="20sp" />
 
             </androidx.appcompat.widget.LinearLayoutCompat>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="27dp"
-            android:orientation="horizontal"
-
-            android:weightSum="2">
-
-
-            <ImageView
-
-                android:id="@+id/buy"
-                android:layout_width="255dp"
-                android:layout_height="94dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="6dp"
-                android:layout_weight="1"
-                android:paddingTop="0dp"
-                android:src="@drawable/buyy" />
         </LinearLayout>
     </LinearLayout>
 

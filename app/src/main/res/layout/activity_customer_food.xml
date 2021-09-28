@@ -9,7 +9,6 @@
     tools:context=".CustomerFood">
 
 
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/reView"
         android:layout_width="match_parent"
@@ -19,7 +18,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="0dp"
         android:layout_marginLeft="0dp"
-        android:layout_marginTop="185dp" />
+        android:layout_marginTop="250dp" />
 
 
     <ImageView
@@ -54,4 +53,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/reView" />
+    <Button
+        android:id="@+id/idBTNbuy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:layout_weight="1"
+        android:text="Buy Foods"
+        android:textAllCaps="false"
+        android:layout_below="@id/textView"
+        android:textColor="@color/white"
+        app:backgroundTint="#24DA04" />
+
 </RelativeLayout>
