@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="3dp">
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_shade_2">
+
+        <TextView
+            android:id="@+id/idTVCustomerId"
+            android:layout_width="334dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="65dp"
+            android:layout_marginRight="65dp"
+            android:layout_marginBottom="3dp"
+            android:padding="4dp"
+            android:singleLine="true"
+            android:text="Customer ID"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/idTVCusNic"
+            android:layout_width="334dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/idTVCustomerId"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="65dp"
+            android:layout_marginRight="65dp"
+            android:layout_marginBottom="3dp"
+            android:padding="4dp"
+            android:singleLine="true"
+            android:text="Customer NIC"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="Customer Name"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_below="@+id/idTVCusNic"
+            android:layout_margin="3dp"
+            android:padding="4dp"
+            android:textSize="15dp"
+            android:id="@+id/idTVCustomerName"/>
+
+        <TextView
+            android:id="@+id/idTVCustomerAddress"
+            android:layout_width="334dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/idTVCustomerName"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="65dp"
+            android:layout_marginRight="65dp"
+            android:layout_marginBottom="3dp"
+            android:padding="4dp"
+            android:singleLine="true"
+            android:text="Customer Address"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

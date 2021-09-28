@@ -69,9 +69,8 @@ public class AddDeliveryActivity extends AppCompatActivity {
                 public void onDataChange(@NonNull  DataSnapshot snapshot) {
                     loadingPB.setVisibility(View.GONE);
                     databaseReference.child(customerID).setValue(deliveryRVModal);
-                    Toast.makeText(AddDeliveryActivity.this, "Delivery Information is Added", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(AddDeliveryActivity.this, SuccessPage.class));
-
+                    Toast.makeText(AddDeliveryActivity.this, "Delivery Information is Added", Toast.LENGTH_SHORT).show();
                 }
 
                 @Override

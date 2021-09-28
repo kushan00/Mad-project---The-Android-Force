@@ -90,6 +90,11 @@ public class CustomerFood extends AppCompatActivity {
                 startActivity(d);
                 this.finish();
                 return  true;
+            case R.id.idCustomerD:
+                Intent dp = new Intent(CustomerFood.this,CustomerDetails.class);
+                startActivity(dp);
+                this.finish();
+                return  true;
             default:
                 return super.onOptionsItemSelected(item);
         }
