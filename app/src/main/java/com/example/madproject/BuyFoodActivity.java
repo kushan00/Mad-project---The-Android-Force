@@ -43,7 +43,7 @@ public class BuyFoodActivity extends AppCompatActivity {
             buytBTN = findViewById(R.id.idBtnbuyfoods);
             loadingPB = findViewById(R.id.idPBloading);
             firebaseDatabase = firebaseDatabase.getInstance();
-            databaseReference = firebaseDatabase.getReference("Payment Details");
+            databaseReference = firebaseDatabase.getReference("Buy Foods");
 
             FirebaseUser user =  FirebaseAuth.getInstance().getCurrentUser();
             String uid = user.getUid().toString();
