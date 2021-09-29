@@ -133,7 +133,7 @@ public class CustomerFood extends AppCompatActivity  {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
         switch (id) {
-            case R.id.idLogout:
+            case R.id.idAdminLogOut:
                 Toast.makeText(this, "User Logged out", Toast.LENGTH_SHORT).show();
                 mAuth.signOut();
                 Intent i = new Intent(CustomerFood.this, LoginActivity.class);

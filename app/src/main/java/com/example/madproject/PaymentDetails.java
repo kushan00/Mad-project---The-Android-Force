@@ -55,8 +55,6 @@ public class PaymentDetails extends AppCompatActivity implements PaymentRVAdapte
         loadingPB = findViewById(R.id.idPBLoding);
         addFAB = findViewById(R.id.idAddFAB);
         firebaseDatabase = FirebaseDatabase.getInstance();
-        FirebaseUser user =  FirebaseAuth.getInstance().getCurrentUser();
-        String uid = user.getUid().toString();
         databaseReference = firebaseDatabase.getReference("Payment Details");
         paymentDetialsRVModalArrayList = new ArrayList<>();
         BottemsheetRL = findViewById(R.id.idRLBottomsheet);
@@ -154,7 +152,7 @@ public class PaymentDetails extends AppCompatActivity implements PaymentRVAdapte
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
         switch (id){
-            case R.id.idLogout:
+            case R.id.idAdminLogOut:
                 Toast.makeText(this, "User Logged out", Toast.LENGTH_SHORT).show();
                 mAuth.signOut();
                 Intent i = new Intent(PaymentDetails.this,LoginActivity.class);
