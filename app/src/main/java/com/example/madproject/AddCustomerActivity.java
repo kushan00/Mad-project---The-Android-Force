@@ -73,6 +73,7 @@ public class AddCustomerActivity extends AppCompatActivity {
                             databaseReference.child(customerID).setValue(customerRVModel);
                             startActivity(new Intent(AddCustomerActivity.this, CustomerDetails.class));
                             Toast.makeText(AddCustomerActivity.this, "Customer Added..", Toast.LENGTH_SHORT).show();
+                            finish();
                         }
 
                         @Override

@@ -70,7 +70,7 @@ public class BuyFoodActivity extends AppCompatActivity {
                                 databaseReference.child(RegID).setValue(BuySelectedFood);
                                 Toast.makeText(BuyFoodActivity.this, "Order Created Successfully!", Toast.LENGTH_SHORT).show();
                                 startActivity(new Intent(BuyFoodActivity.this, AddPaymentActivity.class));
-
+                                finish();
                             }
 
                             @Override

@@ -77,7 +77,7 @@ public class AddPaymentActivity extends AppCompatActivity {
                             databaseReference.child(RegID).setValue(PaymentDetialsRVModal);
                             startActivity(new Intent(AddPaymentActivity.this, AddDeliveryActivity.class));
                             Toast.makeText(AddPaymentActivity.this, "Details Saved Successfully!", Toast.LENGTH_SHORT).show();
-
+                            finish();
                         }
 
                         @Override

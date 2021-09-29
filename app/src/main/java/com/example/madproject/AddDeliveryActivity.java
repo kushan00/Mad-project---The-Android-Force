@@ -77,6 +77,7 @@ public class AddDeliveryActivity extends AppCompatActivity {
                             databaseReference.child(customerID).setValue(deliveryRVModal);
                             startActivity(new Intent(AddDeliveryActivity.this, SuccessPage.class));
                             Toast.makeText(AddDeliveryActivity.this, "Delivery Information is Added", Toast.LENGTH_SHORT).show();
+                            finish();
                         }
 
                         @Override
