@@ -57,7 +57,7 @@ public class AdminLoginActivity extends AppCompatActivity {
                     Toast.makeText(AdminLoginActivity.this, "Please enter your credentials..", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                mAuth.signInWithEmailAndPassword("minosh@gmail.com",password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         
