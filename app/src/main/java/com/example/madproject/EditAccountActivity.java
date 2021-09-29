@@ -91,9 +91,10 @@ public class EditAccountActivity extends AppCompatActivity {
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         //loadingPB.setVisibility(View.GONE);
                         databaseReference.updateChildren(map);
-                        Toast.makeText(EditAccountActivity.this, "Customer Details Updated", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(EditAccountActivity.this, CustomerDetails.class));
-                    }
+                        Toast.makeText(EditAccountActivity.this, "Customer Details Updated", Toast.LENGTH_SHORT).show();
+                        finish();
+                   }
 
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
@@ -112,7 +113,9 @@ public class EditAccountActivity extends AppCompatActivity {
     }
     private void deleteCustomer(){
         databaseReference.removeValue();
-        Toast.makeText(this, "Customer Details Deleted!", Toast.LENGTH_SHORT).show();
         startActivity(new Intent(EditAccountActivity.this, CustomerDetails.class));
+        Toast.makeText(this, "Customer Details Deleted!", Toast.LENGTH_SHORT).show();
+        finish();
+
 }
 }
