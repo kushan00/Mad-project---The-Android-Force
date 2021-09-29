@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -74,11 +75,59 @@ public class CustomerFood extends AppCompatActivity  {
         cusadapter.stopListening();
     }
 
+
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        getMenuInflater().inflate(R.menu.searchmenu,menu);
+        MenuItem item = menu.findItem(R.id.search);
+
+        SearchView searchView =(SearchView)item.getActionView();
+
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+
+                processearch(s);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+
+                processearch(s);
+                return false;
+            }
+        });
+
+
+
+        return super.onCreateOptionsMenu(menu);
+
+
     }
+
+    private void processearch(String s)
+    {
+        FirebaseRecyclerOptions<cusmodel> options =
+                new FirebaseRecyclerOptions.Builder<cusmodel>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("foods").orderByChild("name").startAt(s).endAt(s+"\uf8ff"), cusmodel.class)
+                        .build();
+
+
+        cusadapter = new cusadapter(options);
+        cusadapter.startListening();
+        reView.setAdapter(cusadapter);
+
+    }
+
+
+
+
+
+
+
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {

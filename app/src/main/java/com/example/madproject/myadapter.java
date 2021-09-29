@@ -64,7 +64,6 @@ public class myadapter extends FirebaseRecyclerAdapter<model,myadapter.myviewhol
                EditText description = myview.findViewById(R.id.udescription);
                Button submit= myview.findViewById(R.id.usubmit);
 
-
                name.setText(model.getName());
                description.setText(model.getDescription());
                price.setText("Rs."+model.getPrice());
@@ -93,7 +92,6 @@ public class myadapter extends FirebaseRecyclerAdapter<model,myadapter.myviewhol
                                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                                     @Override
                                     public void onSuccess(Void aVoid) {
-
                                         dialogPlus.dismiss();
 
 
